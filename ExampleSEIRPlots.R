@@ -42,7 +42,7 @@
 	matty.B <- matty[no.pop.B:nrow(matty),]
 
 	 plot(0 , type = "n" , xlim = c(1,time) , ylim = c(0,max(matty)) , xlab = "time" , ylab = "units")
-	lines(apply(matty.A , 2 , mean) , col = "red" , lwd = 2 , lty = 2)
+	lines(apply(matty.A , 2 , mean) , col = "red" , lwd = 2 , lty = 2) #the second argument is the dimension, so this takes the mean of each column
 	lines(apply(matty.B , 2 , mean) , col = "blue" , lwd = 2 , lty = 2)
 	#no duh they're not really different, but we wouldn't expect that anyway
 
