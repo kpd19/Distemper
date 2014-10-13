@@ -21,7 +21,7 @@
 	matty[1:5,] #sneak peak of the top five rows
 	matty[seq(nrow(matty)-5,nrow(matty),1),] #sneak peak of the bottom five rows
 
-#1.1.  first, let's explore just one (S,E,I, or R) using the sample above (how you have your compartments organized), we'll divide is in half (A and B) and plot them
+#1.1.  first, let's explore just one (S,E,I, or R) using the sample above (how you have your compartments organized)
 	 #make a blank plot and set axes
 	 plot(0 , type = "n" , xlim = c(1,time) , ylim = c(0,max(matty)) , xlab = "time" , ylab = "units")
 
@@ -31,11 +31,11 @@
 		lines(matty[i,] , col = line.col)
 	}
 
-	#now add the mean, and, for fun, the variance
+	#now add the mean, and, for funzies, the variance
 	lines(apply(matty , 2 , mean) , col = "red" , lwd = 2 , lty = 2) #lwd is line width, and lty is line type
 	lines(apply(matty , 2 , var) , col = "blue" , lwd = 2 , lty = 2) #plots the variance
 
-#1.2.  second, just quilky, let's just see how we could plot two means, since I imagine you'd like to see all 4 (S,E,I, and R) in a plot.
+#1.2.  second, just quilky, let's just see how we could plot two means, since I imagine you'd like to see all 4 (S,E,I, and R) in a plot, and we'll just split the data into two groups: A & B.
 	no.pop.A <- nrow(matty)%/%2 # "%/%" is integer division in the event there is a decimal left over
 	no.pop.B <- nrow(matty)-no.pop.A
 	matty.A <- matty[1:no.pop.A,]
