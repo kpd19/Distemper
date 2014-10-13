@@ -1,4 +1,4 @@
-functionsinspace
+Distemper code
 ================
 
-This is a GH test, where I will be sharing and editing examples of R script on how to model dynamic population models in a spatial context.
+This is repository for a project looking at the spread of canine distemper.  I've posted bits of R code to share with collaborators.
